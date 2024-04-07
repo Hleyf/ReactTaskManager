@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .main-container{
+    @apply md:flex flex-wrap md:mt-10 md:mx-20 w-auto bg-white shadow-md rounded border
+  }
+
+  .app-section {
+    @apply flex-grow m-5
+  }
+
+  .main-col {
+    @apply flex flex-col w-full
+  }
+
+  .task-input {
+    @apply relative m-0 w-full text-lg font-normal leading-normal p-4 pl-4 h-16 mt-4 
+    border-0 rounded-md bg-black bg-opacity-5 box-border antialiased
+    focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-20
+  }
+}
+
+.task-input {
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2); 
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+}
+
+.footer {
+  @apply flex p-2 h-4 text-center text-sm
+}
+
+.clear-completed {
+  line-height: 19px;
+  visibility: hidden;
+}
+
+.clear-completed.show {
+  visibility: visible;
+}

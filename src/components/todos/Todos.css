@@ -1,0 +1,18 @@
+.task-list {
+    @apply flex items-center justify-between border-b  rounded-md transition-colors duration-400 ease-in-out
+    m-1 relative border-gray-300 p-4;
+    @apply hover:bg-gray-100;
+  }
+
+  .completed {
+    @apply line-through text-gray-400 bg-green-500 bg-opacity-50 transition-colors duration-400 ease-in-out font-light;
+    @apply hover:bg-green-300;
+  }
+
+  .completed label {
+    @apply text-gray-400;
+  }
+
+  label {
+    @apply text-center w-full p-8 leading-none break-words transition-colors duration-400 font-light text-gray-700
+  }
