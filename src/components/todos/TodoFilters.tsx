@@ -31,7 +31,7 @@ export const Filters: React.FC<Props> = ({ filterSelected, onFilterChange }) => 
                   return (
                     <li key={key}>
                       <a
-                        className={className}
+                        className={`${className} border-gradient rounded` }
                         href={href}
                         onClick={(event) => {
                           event.preventDefault()

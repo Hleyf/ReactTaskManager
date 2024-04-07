@@ -39,3 +39,67 @@
 .clear-completed.show {
   visibility: visible;
 }
+
+.fixed-width {
+  display: inline-block;
+  width: 2em; /* Adjust this value based on your needs */
+  text-align: right;
+}
+
+/* Filter custom buttons */
+.border-gradient {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 5px;
+}
+.border-gradient:before, .border-gradient:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.border-gradient:before {
+  background: linear-gradient(45deg, rgba(149, 245, 149, 0.87), rgb(145, 76, 235));
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.border-gradient:after {
+  background: linear-gradient(225deg, rgba(149, 245, 149, 0.87), rgb(145, 76, 235));
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.border-gradient:hover:before {
+  opacity: 0;
+}
+
+.border-gradient:hover:after {
+  opacity: 1;
+}
+
+/* When the button is selected */
+
+.border-gradient.selected {
+  color: white;
+  background: linear-gradient(45deg, rgb(145, 76, 235), rgba(149, 245, 149, 0.87));
+}
+
+.border-gradient.selected:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: -1;
+  border-radius: 4px;
+  background: linear-gradient(45deg, rgb(145, 76, 235), rgba(149, 245, 149, 0.87));
+  opacity: 1;
+}

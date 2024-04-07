@@ -23,7 +23,7 @@ export const TodoFooter: React.FC<Props> = ({
   return (
         <footer className="footer">
             <span className='float-left text-left w-1/4'>
-                <strong>{activeCount}</strong> items left
+                <strong className="fixed-width">{activeCount}</strong> items left
                 {/* <strong>{completedCount}</strong> items completed */}
             </span>
             <div className='w-1/2'>
