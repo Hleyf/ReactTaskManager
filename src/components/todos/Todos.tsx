@@ -15,6 +15,10 @@ export const Todos: React.FC = () => {
                         id={todo.id}
                         title={todo.title}
                         completed={todo.completed}
+                        status={todo.status}
+                        createdAt={todo.createdAt}
+                        updatedAt={todo.updatedAt}
+                        time={todo.time}
                         />
                 </li>
             ))}
