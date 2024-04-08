@@ -1,7 +1,7 @@
 import { type PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { type TodoId, type FilterValue, type ITodo } from '../types'
 import { type RootState } from '../store'
-import { TODO_FILTERS } from '../common/consts'
+import { TODO_FILTERS, TASK_STATUS } from '../common/consts'
 
 interface TodosState {
   todos: ITodo[]
@@ -36,6 +36,7 @@ const todosSlice = createSlice({
       const { id, completed } = action.payload
       const todo = state.todos.find(todo => todo.id === id)
       if (todo !== undefined) {
+        todo.status = completed ? TASK_STATUS.COMPLETED : TASK_STATUS.OPEN
         todo.completed = completed
       }
     },
