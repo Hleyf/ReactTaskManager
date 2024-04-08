@@ -2,10 +2,10 @@ import { TODO_FILTERS } from '../../common/consts'
 import { type FilterValue } from '../../types'
 
 const FILTER_BUTTONS = {
-  [TODO_FILTERS.ALL]: {
-    literal: 'All',
-    href: `/?filter=${TODO_FILTERS.ALL}`
-  },
+  // [TODO_FILTERS.ALL]: {
+  //   literal: 'All',
+  //   href: `/?filter=${TODO_FILTERS.ALL}`
+  // },
   [TODO_FILTERS.ACTIVE]: {
     literal: 'Active',
     href: `/?filter=${TODO_FILTERS.ACTIVE}`
@@ -31,7 +31,7 @@ export const Filters: React.FC<Props> = ({ filterSelected, onFilterChange }) => 
                   return (
                     <li key={key}>
                       <a
-                        className={`${className} border-gradient rounded` }
+                        className={`${className} border-gradient rounded p-1` }
                         href={href}
                         onClick={(event) => {
                           event.preventDefault()

@@ -17,10 +17,11 @@ export default {
     outline: ['responsive', 'focus'],
     ringColor: ['responsive', 'focus'],
     extend: {
-      opacity: ['group-hover']
+      // opacity: ['group-hover']
     }
   },
   plugins: [
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    require('autoprefixer')
   ]
 }
