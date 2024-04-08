@@ -28,9 +28,12 @@
 
 .clear-completed {
   line-height: 0px;
+  position: relative !important;
   visibility: hidden;
   color: white;
   background: white;
+  min-height: 26px;
+  bottom: 3px;
 }
 
 .clear-completed.show {

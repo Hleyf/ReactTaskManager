@@ -49,8 +49,8 @@ export const TodoFooter: React.FC<Props> = ({
             </div>
             <div className='w-1/4 flex mr-2 justify-around'>
                 <button
-                className={`clear-completed align-middle rounded border-gradient min-w-28 min-h-6 
-                 top-0.5 ${completedCount > 0 ? 'show' : ''}`}
+                className={`clear-completed align-middle rounded border-gradient min-w-28
+                 justify-center ${completedCount > 0 ? 'show' : ''}`}
                 onClick={onClearCompleted}
                 >
                      Clear completed
