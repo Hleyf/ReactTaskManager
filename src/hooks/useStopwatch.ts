@@ -29,8 +29,7 @@ export function useStopwatch (): IStopwatch {
   const seconds = (time % 60).toString().padStart(2, '0')
   const minutes = (Math.floor(time / 60) % 60).toString().padStart(2, '0')
   const hours = (Math.floor(time / 3600)).toString().padStart(2, '0')
-
   const currentTime: ITime = { hours, minutes, seconds }
 
-  return { start, pause, reset, currentTime }
+  return { start, pause, reset, currentTime, isActive }
 }
