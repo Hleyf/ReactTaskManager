@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../../slices/todo'
+import { TASK_STATUS } from '../../common/consts'
 
 export const CreateTodo: React.FC = () => {
   const dispatch = useDispatch()
@@ -10,7 +11,10 @@ export const CreateTodo: React.FC = () => {
     e.preventDefault()
     if (title.trim() !== '') {
       const id: string = crypto.randomUUID().toString()
-      dispatch(addTodo({ id, title, completed: false }))
+      dispatch(addTodo({
+        id, title, completed: false,
+        status: TASK_STATUS.OPEN,
+      }))
       setTitle('')
     }
   }

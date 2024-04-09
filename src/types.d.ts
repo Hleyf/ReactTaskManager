@@ -3,9 +3,6 @@ export interface ITodo {
   title: string
   completed: boolean
   status: TaskStatus
-  createdAt: Moment
-  updatedAt: Moment
-  time: ITime
 }
 
 export type TodoId = Pick<ITodo, 'id'>

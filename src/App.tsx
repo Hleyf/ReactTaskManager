@@ -7,16 +7,19 @@ import { Todos } from './components/todos/Todos'
 import { store } from './store'
 import { Stopwatch } from './components/stopWatch/StopWatch'
 import './App.css'
+import { TASK_STATUS } from './common/consts'
 
 const mockTodos: ITodo[] = [
-  { id: '1', title: 'Task 1', completed: false },
-  { id: '2', title: 'Task 2', completed: true },
-  { id: '3', title: 'Task 3', completed: false }
+  { id: '1', title: 'Task 1', completed: false, status: TASK_STATUS.OPEN},
+  { id: '2', title: 'Task 2', completed: true, status: TASK_STATUS.COMPLETED},
+  { id: '3', title: 'Task 3', completed: false, status: TASK_STATUS.OPEN}
 ]
 
 if (store.getState().tasks.todos.length === 0) {
   mockTodos.forEach((todo: ITodo) => {
-    store.dispatch(addTodo({ id: todo.id, title: todo.title, completed: todo.completed }))
+    store.dispatch(addTodo(
+      { id: todo.id, title: todo.title, completed: todo.completed, status: todo.status}
+    ))
   })
 }
 
